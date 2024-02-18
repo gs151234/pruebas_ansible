@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update Rocky Linux
+    dnf:
+      update_cache: yes
+    when: ansible_distribution == "Rocky"
+
+  - name: upgrade Ubuntu 
+    apt:
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
