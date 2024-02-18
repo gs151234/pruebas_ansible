@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: instalar openJDK en Rocky
+    dnf:
+      name:
+         
+
+
+
+
+
